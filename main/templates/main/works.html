@@ -1,0 +1,27 @@
+{% extends 'news/layout.html' %}
+
+{% block title %}Работы участников{% endblock %}
+
+{% block content %}
+<style>
+div.a {
+	text-align: center;
+}
+</style>
+<div class="a">
+    <h1>Работы участников</h1>
+    {% if works %}
+    {% for el in works %}
+    <div class="alert alert-warning">
+        <h3>{{ el.lastname }} {{ el.firstname }} {{ el.thirdname }}</h3>
+        <h4>{{ el.theme }}</h4>
+        <h5>{{ el.header }}</h5>
+        <p>{{ el.full_text }}<p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>None</p>
+    {% endif %}
+</div>
+
+{% endblock %}

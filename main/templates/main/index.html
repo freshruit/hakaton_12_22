@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Голосование</title>
+    <link rel="stylesheet" href="static/main/css/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,800;1,200&display=swap");
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="./font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <a href="#">
+          <img class="header__logo " src="static/main/img/пфн.png" alt="Логотип" />
+
+
+        </a>
+        <h1 class="header__pustota">  </h1>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="header__text-box">
+      <h1 class="header__title">Примите участие в конкурсе</h1>
+        <p class="header__subtitle">
+          Узнать информацию по ссылке ниже
+        </p>
+
+        <a href="/news"><span class="header__button">Узнать подробнее</span></a>
+      </div>
+    </header>
+
+    <footer class="footer">
+
+      <div class="footer__icon">
+      <a href="https://vk.com/"><img class="vk" src="static/main/img/vk.png" alt="VK"/></a>
+      <a href="https://web.telegram.org/k/"><img class="tg" src="static/main/img/tg.png" alt="telegram"/></a>
+      <a href="https://discord.com/"><img class="ds" src="static/main/img/ds.png" alt="Discord"/></a>
+      <p>Связаться с нами вы можете в соц.сетях или задать вопрос по адресу: office@gov.orb.ru</p>
+      </div>
+      <p>Команда: ТП</p>
+    </footer>
+
+    <script>
+      let menu = document.getElementById("menu");
+
+      function showMenu() {
+        menu.style.right = "0";
+      }
+
+      function hideMenu() {
+        menu.style.right = "-150px";
+      }
+    </script>
+  </body>
+</html>

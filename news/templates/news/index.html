@@ -1,0 +1,27 @@
+{% extends 'news/layout.html' %}
+
+{% block title %}Анонсы{% endblock %}
+
+{% block content %}
+<style>
+div.a {
+	text-align: center;
+}
+</style>
+<div class="a">
+    <h1>Анонсы</h1>
+    {% if news %}
+    {% for el in news %}
+    <div class="alert alert-warning">
+        <h3>{{ el.title }}</h3>
+        <p>{{ el.anons }}</p>
+        <p>{{ el.full_text }}</p>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>None</p>
+    {% endif %}
+</div>
+<a href="/news/create"><span class="header__button">Подать заявку</span></a>
+
+{% endblock %}

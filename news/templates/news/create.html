@@ -1,0 +1,28 @@
+{% extends 'news/layout.html' %}
+
+{% block title %}Отправка заявки{% endblock %}
+
+{% block content %}
+<style>
+div.a {
+	text-align: center;
+}
+</style>
+<div class="a">
+    <h1>Отправка заявки</h1>>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.lastname }}<br>
+        {{ form.firstname }}<br>
+        {{ form.thirdname }}<br>
+        {{ form.job }}<br>
+        {{ form.placejob }}<br>
+        {{ form.theme }}<br>
+        {{ form.header }}<br>
+        {{ form.full_text }}<br>
+        <button class="header__button5">Отправить заявку</button>
+    </form>
+</div>
+
+
+{% endblock %}
